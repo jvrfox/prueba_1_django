@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ mecanico.nombre }}</h1>
+<p>Contacto: {{ mecanico.contacto }}</p>
+<p>Especialidad: {{ mecanico.especialidad }}</p>
+
+<a href="{% url 'mecanico_update' mecanico.pk %}">Editar</a>
+<a href="{% url 'mecanico_delete' mecanico.pk %}">Eliminar</a>
+<a href="{% url 'mecanico_list' %}">Volver a la lista</a>
+{% endblock %}

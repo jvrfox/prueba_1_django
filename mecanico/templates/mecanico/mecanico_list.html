@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Mecanicos</h1>
+<ul>
+    {% for mecanico in mecanicos %}
+    <li>
+        <a href="{% url 'mecanico_detail' mecanico.pk %}">{{ mecanico.nombre }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'mecanico_create' %}">Nuevo Mecanico</a>
+{% endblock %}

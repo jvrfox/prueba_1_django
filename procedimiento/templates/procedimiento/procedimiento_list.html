@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Procedimientos</h1>
+<ul>
+    {% for procedimiento in procedimientos %}
+    <li>
+        <a href="{% url 'procedimiento_detail' procedimiento.pk %}">{{ procedimiento.nombre }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'procedimiento_create' %}">Nuevo Procedimiento</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar Mecanico</h1>
+<p>¿Estás seguro de que quieres eliminar a {{ mecanico.nombre }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar</button>
+</form>
+<a href="{% url 'mecanico_detail' mecanico.pk %}">Cancelar</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taller Mecanico</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'mecanico_list' %}">Mecanicos</a>
+        <a href="{% url 'vehiculo_list' %}">Vehiculos</a>
+        <a href="{% url 'procedimiento_list' %}">Procedimientos</a>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

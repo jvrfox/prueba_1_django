@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar Procedimiento</h1>
+<p>¿Estás seguro de que quieres eliminar el procedimiento {{ procedimiento.nombre }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar</button>
+</form>
+<a href="{% url 'procedimiento_detail' procedimiento.pk %}">Cancelar</a>
+{% endblock %}

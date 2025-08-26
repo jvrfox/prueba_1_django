@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ vehiculo.patente }}</h1>
+<p>Modelo: {{ vehiculo.modelo }}</p>
+<p>Año: {{ vehiculo.anio }}</p>
+<p>Dueño: {{ vehiculo.dueno }}</p>
+
+<a href="{% url 'vehiculo_update' vehiculo.pk %}">Editar</a>
+<a href="{% url 'vehiculo_delete' vehiculo.pk %}">Eliminar</a>
+<a href="{% url 'vehiculo_list' %}">Volver a la lista</a>
+{% endblock %}
